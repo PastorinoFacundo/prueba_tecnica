@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+							http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+							http://www.springframework.org/schema/tx
+        					http://www.springframework.org/schema/tx/spring-tx.xsd
+							http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+							http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+							http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+<!-- 	<context:property-placeholder -->
+<!-- 		location="file://${headbook.headbook.root.path}/conf/headbook-config.properties,  -->
+<!-- 		file://${bcba.backoffice.root.path}/conf/backoffice-security.properties" /> -->
+
+	<context:property-placeholder
+		location="file://${headbook.headbook.root.path}/conf/headbook-config.properties" />
+
+<!-- 	<bean id="messageSource" -->
+<!-- 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource"> -->
+<!-- 		<property name="cacheSeconds" value="3600" /> -->
+<!-- 		<property name="basename" -->
+<!-- 			value="file:${bcba.backoffice.root.path}/conf/messages-config" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="messageManager" class="com.certant.bcba.backoffice.config.MessageManager"> -->
+<!-- 		<property name="messageSource" ref="messageSource" /> -->
+<!-- 	</bean> -->
+
+	
+	<!-- Database BO -->
+
+<!-- 	<bean id="sqlSessionFactory" name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> -->
+<!-- 		<property name="url" value="jdbc:sqlserver://${headbook.headbook.db.host}:${headbook.headbook.db.port};databasename=${headbook.headbook.db.database}" /> -->
+<!-- 		<property name="username" value="${headbook.headbook.db.user}" /> -->
+<!-- 		<property name="password" value="${headbook.headbook.db.password}" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> -->
+<!-- 		<property name="basePackage" value="com.headbook.headbook.db.mappers" /> -->
+<!-- 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBO" /> -->
+<!-- 	</bean> -->
+
+	<!-- Transactionalidad -->
+<!-- 	<tx:annotation-driven transaction-manager="txManager" /> -->
+
+<!-- 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 	</bean> -->
+
+
+	
+	<!-- Configuración Estatica -->
+
+<!-- 	<bean class="com.certant.bcba.backoffice.config.GeneralConfig" /> -->
+
+<!-- 	<context:component-scan -->
+<!-- 		base-package="com.certant.bcba.beneficios.converters, -->
+<!-- 						com.certant.bcba.beneficios.services, -->
+<!-- 						com.certant.bcba.backoffice.service.aop" /> -->
+
+<!-- 	<aop:aspectj-autoproxy /> -->
+<!-- 	<bean  class="com.certant.bcba.backoffice.service.aop.AspectOperador" />  -->
+
+</beans>

@@ -1,4 +1,4 @@
-package main.java.headbook.modelo;
+package com.headbook.modelo;
 
 import java.util.Date;
 
